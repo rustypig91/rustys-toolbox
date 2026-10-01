@@ -1,0 +1,95 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#090b0e">
+  <meta name="description" content="Rusty's Toolbox: Canvaz CAN analyzer and Pigtail serial terminal. Practical open-source tools built for work, personal projects, and the next debugging session.">
+  <meta property="og:title" content="Rusty's Toolbox">
+  <meta property="og:description" content="Built for my workbench. Shared for yours. Explore Canvaz and Pigtail, open-source tools for CAN and serial debugging.">
+  <meta property="og:type" content="website">
+  <link rel="icon" href="assets/favicon.svg" type="image/svg+xml">
+  <link rel="stylesheet" href="styles.css">
+  <title>Rusty's Toolbox — Canvaz &amp; Pigtail</title>
+</head>
+<body>
+  <a class="skip-link" href="#main">Skip to content</a>
+  <header class="site-header wrap">
+    <a class="brand" href="#" aria-label="Rusty's Toolbox home"><span class="brand-mark" aria-hidden="true">r<span>.</span></span><span>rusty's<span class="brand-sub">toolbox</span></span></a>
+    <nav aria-label="Main navigation"><a href="#projects">The tools</a><a href="#differences">What sets them apart</a><a href="#story">The story</a><a class="github-link" href="https://github.com/rustypig91">GitHub <span aria-hidden="true">↗</span></a></nav>
+  </header>
+  <main id="main">
+    <section class="hero wrap" aria-labelledby="hero-title">
+      <div class="hero-copy">
+        <p class="eyebrow"><span class="status-dot" aria-hidden="true"></span> From the workbench · Open source</p>
+        <h1 id="hero-title">Built for my<br>workbench.<br><span>Shared for yours.</span></h1>
+        <p class="hero-description">Practical tools for the moments when hardware has something to say. Built to help with my work and personal projects, and shared in the hope they help with yours.</p>
+        <a class="button button-primary" href="#projects">Explore the tools <span aria-hidden="true">↓</span></a>
+        <p class="hero-note">CAN buses. Serial ports. A little less guesswork.</p>
+      </div>
+    </section>
+    <div class="spec-strip"><div class="wrap"><span>Made for embedded development</span><span>Windows &amp; Linux</span><span>Open source on GitHub</span></div></div>
+    <section class="projects wrap" id="projects" aria-labelledby="projects-title">
+      <div class="section-heading"><div><p class="eyebrow">01 / The tools</p><h2 id="projects-title">Two tools. Less friction.</h2></div><p>From bus traffic to boot logs,<br>make sense of what your device is doing.</p></div>
+      <div class="project-grid">
+        <article class="project-card canvaz">
+          <div class="project-top"><img src="assets/canvaz.png" width="64" height="64" alt="" loading="lazy"><span class="project-type">CAN ANALYZER</span><span class="project-number">01</span></div>
+          <h3>Canvaz<span>.</span></h3><p class="project-tagline">See what’s happening on the bus.</p>
+          <p class="project-description">Trace, decode, plot, and simulate CAN traffic in one place. Turn raw frames into meaningful signals with DBC files, then follow them live.</p>
+          <ul class="feature-list"><li>Live frame tracing and filtering</li><li>DBC decoding and real-time signal plots</li><li>Message simulation and J1939 support</li><li>Kvaser, PEAK PCAN, and Linux SocketCAN</li></ul>
+          <div class="project-links"><a class="button button-light" href="https://github.com/rustypig91/canvaz/releases">Get Canvaz <span aria-hidden="true">↗</span></a><a class="text-link" href="https://github.com/rustypig91/canvaz">Source &amp; docs <span aria-hidden="true">↗</span></a></div>
+          <div class="project-footer"><span>Windows / Linux</span><span>Rust + Tauri</span></div>
+        </article>
+        <article class="project-card pigtail">
+          <div class="project-top"><img src="assets/pigtail.png" width="64" height="64" alt="" loading="lazy"><span class="project-type">SERIAL TERMINAL</span><span class="project-number">02</span></div>
+          <h3>Pigtail<span>.</span></h3><p class="project-tagline">Keep the conversation with your device.</p>
+          <p class="project-description">A serial terminal built for real debugging sessions. Follow devices through resets, find what matters in the log, and plot the numbers behind the text.</p>
+          <ul class="feature-list"><li>Auto-reconnect by USB device identity</li><li>Search and filter the full captured history</li><li>Live plots linked back to their log lines</li><li>Continuous raw capture and multi-port views</li></ul>
+          <div class="project-links"><a class="button button-light" href="https://github.com/rustypig91/pigtail-serial-console/releases">Get Pigtail <span aria-hidden="true">↗</span></a><a class="text-link" href="https://github.com/rustypig91/pigtail-serial-console">Source &amp; docs <span aria-hidden="true">↗</span></a></div>
+          <div class="project-footer"><span>Windows / Linux</span><span>Rust + egui</span></div>
+        </article>
+      </div>
+      <p class="download-note">Downloads and installation instructions live in each project’s GitHub repository.</p>
+    </section>
+    <section class="differences wrap" id="differences" aria-labelledby="differences-title">
+      <div class="section-heading"><div><p class="eyebrow">02 / Made for the debugging session</p><h2 id="differences-title">What sets them apart.</h2></div><p>The details that help when a frame table<br>or a scrolling terminal is only the beginning.</p></div>
+      <div class="difference-grid">
+        <section class="tool-difference canvaz" aria-labelledby="canvaz-difference-title">
+          <p class="project-type">CAN ANALYZER</p>
+          <h3 id="canvaz-difference-title">Canvaz<span>.</span></h3>
+          <p class="difference-intro">A conventional CAN workflow can mean juggling a trace viewer, a decoder, and a plotting tool. Canvaz brings those steps into one workspace, with support for the protocols behind the frames.</p>
+          <dl class="difference-list">
+            <div><dt>Automatic reconnect</dt><dd>Recover from an interrupted connection without rebuilding your workspace. Keep your channel setup ready for the next round of debugging.</dd></div>
+            <div><dt>DBC decoding and live plotting</dt><dd>Load a DBC per channel to turn bytes into named signals, units, and value-table labels. Drag signals into live plots with zoom and multiple signal panes to follow how values change.</dd></div>
+            <div><dt>J1939 beyond individual frames</dt><dd>See PGN, priority, source, and destination addresses in the trace. Passive transport protocol reassembly supports both BAM and RTS/CTS, bringing multi-packet messages back together.</dd></div>
+            <div><dt>Simulation in the same workspace</dt><dd>Send DBC-defined messages or raw frames at configurable intervals. Build repeatable bus traffic alongside the trace and plots you use to inspect the response.</dd></div>
+            <div><dt>A setup you can come back to</dt><dd>Save channels, plots, and simulator settings as a project, or resume your last session automatically. DBC browsing and configuration stay editable even when an interface is missing.</dd></div>
+            <div><dt>Recording independent of the view</dt><dd>Continuously record received and transmitted frames across channels to CSV, including reassembled J1939 messages. Display filters, a paused trace, and the in-memory retention window do not limit the recording.</dd></div>
+          </dl>
+          <a class="text-link" href="https://github.com/rustypig91/canvaz#features">Explore Canvaz’s features <span aria-hidden="true">↗</span></a>
+        </section>
+        <section class="tool-difference pigtail" aria-labelledby="pigtail-difference-title">
+          <p class="project-type">SERIAL TERMINAL</p>
+          <h3 id="pigtail-difference-title">Pigtail<span>.</span></h3>
+          <p class="difference-intro">A conventional serial terminal gets you connected and shows the output. Pigtail adds ways to keep that session useful through device resets, repeated commands, and long streams of logs.</p>
+          <dl class="difference-list">
+            <div><dt>Reconnect to the device, even on a new port</dt><dd>Automatic reconnect uses USB VID, PID, and serial number to find the device after it resets or re-enumerates. A visible gap marker shows where the connection was interrupted.</dd></div>
+            <div><dt>Macros and command history</dt><dd>Recall previous sends, including commands sent by macros. Named macros combine commands, delays, and regex waits, with loops and keyboard shortcuts for repeatable debugging sequences.</dd></div>
+            <div><dt>Filters that reach back into history</dt><dd>Plain-text and regex filters apply to output already captured, as well as new arrivals. Search the captured scrollback and highlight patterns to find the lines that explain a problem.</dd></div>
+            <div><dt>Live plots linked to the log</dt><dd>Extract numbers from text or regex matches and plot them live. Click a point to jump to its source log line; adding or editing a plotting rule also reprocesses the captured session.</dd></div>
+            <div><dt>Raw capture and restored history</dt><dd>Raw bytes are written to disk continuously, and saved captures restore history across restarts. Use text, hex, or ANSI/VT views to inspect logs, binary data, or interactive device shells.</dd></div>
+            <div><dt>Multiple devices, one timeline</dt><dd>Keep ports in named tabs, compare them in resizable split panes, or merge selected connections into a timestamped view. Follow the conversation between devices without switching between separate terminals.</dd></div>
+          </dl>
+          <a class="text-link" href="https://github.com/rustypig91/pigtail-serial-console#features">Explore Pigtail’s features <span aria-hidden="true">↗</span></a>
+        </section>
+      </div>
+    </section>
+    <section class="story wrap" id="story" aria-labelledby="story-title">
+      <div><p class="eyebrow">03 / Behind the tools</p><h2 id="story-title">It starts with<br>“I wish I had a tool<br>for this.”</h2><div class="story-signature"><span class="brand-mark" aria-hidden="true">r<span>.</span></span><span>Christoffer <a href="https://github.com/rustypig91">@rustypig91 ↗</a></span></div></div>
+      <div class="story-copy"><p class="story-lead">I build tools to solve the problems I run into at work and in my personal projects.</p><p>Sometimes it’s a CAN signal that’s hard to follow. Sometimes it’s a serial device that disappears halfway through a debugging session. These tools grow out of those everyday moments.</p><p>I’m developing Canvaz and Pigtail as open source because I hope they can be useful to others, too. Sharing them is also a way to learn: different hardware, different workflows, and fresh ideas can help me make them better over time.</p><p>They’re ongoing projects, shaped by real use. If one helps you, or you see a way to improve it, I’d love to hear about it.</p></div>
+    </section>
+    <section class="contribute wrap" aria-labelledby="contribute-title"><div><p class="eyebrow">04 / Build along</p><h2 id="contribute-title">Better tools start with real feedback.</h2><p>Try them on your hardware. Report a bug. Suggest a feature.<br>Or jump into the code and help make the next version better.</p></div><div class="contribution-links"><a href="https://github.com/rustypig91/canvaz/issues">Canvaz issues <span aria-hidden="true">↗</span></a><a href="https://github.com/rustypig91/pigtail-serial-console/issues">Pigtail issues <span aria-hidden="true">↗</span></a></div></section>
+  </main>
+  <footer class="site-footer wrap"><a class="footer-brand" href="#">rusty's toolbox<span>Built out of necessity. Shared with possibility.</span></a><a href="mailto:rustypig91@gmail.com">Email me <span>rustypig91@gmail.com</span></a><a href="https://github.com/rustypig91">Find me on GitHub <span aria-hidden="true">↗</span></a><a href="#main">Back to top ↑</a></footer>
+</body>
+</html>
