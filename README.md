@@ -18,12 +18,25 @@ Open http://localhost:8000. You can also open `index.html` directly.
 2. Push the site to `main`, or manually run **Deploy GitHub Pages** in the Actions tab.
 3. The expected URL is https://rustypig91.github.io/rustys-toolbox/.
 
-The workflow publishes only `index.html`, `styles.css`, and `assets/`. Setup follows the [GitHub Pages workflow documentation](https://docs.github.com/en/pages/getting-started-with-github-pages/using-custom-workflows-with-github-pages).
+The workflow publishes only `index.html`, `styles.css`, `sitemap.xml`, and `assets/`. Setup follows the [GitHub Pages workflow documentation](https://docs.github.com/en/pages/getting-started-with-github-pages/using-custom-workflows-with-github-pages).
+
+## Search indexing
+
+The page serves its full content as static HTML, with a descriptive title, meta description, canonical URL, and matching Open Graph metadata. `sitemap.xml` lists the canonical page URL. If the site's public URL changes, update the canonical link, `og:url`, and sitemap together.
+
+After deployment:
+
+1. Add `https://rustypig91.github.io/rustys-toolbox/` as a URL-prefix property in [Google Search Console](https://search.google.com/search-console). Verify ownership using Google's provided HTML file or meta tag. If using a verification file, include it in the workflow's published files and path triggers.
+2. Submit `https://rustypig91.github.io/rustys-toolbox/sitemap.xml` in Search Console's **Sitemaps** report.
+3. Inspect the canonical page URL with **URL Inspection**, check that indexing is allowed, and request indexing. Monitor the **Page indexing** and **Performance** reports afterward.
+
+A sitemap helps discovery but does not guarantee indexing or ranking. This project site does not include `robots.txt`: crawlers look for that file at the host root (`https://rustypig91.github.io/robots.txt`), not under `/rustys-toolbox/`. Any host-wide robots rules must be managed in the root GitHub Pages site.
 
 ## Editing
 
 - `index.html`: site copy, project features, and GitHub links.
 - `styles.css`: layout, colors, typography, responsive rules, and reduced-motion support.
+- `sitemap.xml`: canonical URL for search-engine discovery.
 - `assets/`: project icons copied from their respective repositories, plus the site favicon.
 
 Project descriptions are based on the projects' linked README files. Download links lead to release listings, avoiding hard-coded version numbers. The workbench graphic is an illustration, not a product screenshot. Google Fonts supplies the typography; local fallback fonts keep the page usable offline. The site has no JavaScript, tracking, or backend.

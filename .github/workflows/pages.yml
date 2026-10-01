@@ -6,6 +6,7 @@ on:
     paths:
       - index.html
       - styles.css
+      - sitemap.xml
       - assets/**
       - .github/workflows/pages.yml
   workflow_dispatch:
@@ -34,7 +35,7 @@ jobs:
       - name: Prepare static site
         run: |
           mkdir _site
-          cp index.html styles.css _site/
+          cp index.html styles.css sitemap.xml _site/
           cp -R assets _site/assets
       - name: Upload site
         uses: actions/upload-pages-artifact@v4
