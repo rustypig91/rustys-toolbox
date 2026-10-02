@@ -43,6 +43,7 @@ h1, h2, h3, p { margin-top: 0; }
 .github-link span { margin-left: 14px; }
 
 .hero { padding-block: 94px 88px; display: grid; grid-template-columns: minmax(0, 1fr) minmax(0, 1.1fr); align-items: center; gap: 44px; }
+.hero:has(.hero-screenshots[hidden]) { grid-template-columns: 1fr; }
 .hero-screenshots { position: relative; width: 100%; aspect-ratio: 1.05; }
 .hero-screenshot { position: absolute; width: 91%; }
 .hero-screenshot-canvaz { top: 3%; left: 0; transform: rotate(-4deg); }
@@ -94,7 +95,7 @@ h3 span { color: var(--green); }
 .project-screenshot figcaption { margin-top: 9px; font: 9px/1.6 var(--mono); color: var(--muted); }
 .screenshot-dialog { width: fit-content; max-width: 96vw; max-height: 94dvh; padding: 48px 12px 12px; border: 1px solid var(--line); border-radius: 12px; background: var(--surface); color: var(--ink); box-shadow: 0 24px 100px #0009; }
 .screenshot-dialog::backdrop { background: #000c; }
-.screenshot-dialog img { display: block; max-width: 90vw; max-height: calc(94dvh - 62px); width: auto; height: auto; object-fit: contain; }
+.screenshot-dialog img { display: block; max-width: min(90vw, calc(96vw - 26px)); max-height: calc(94dvh - 62px); width: auto; height: auto; object-fit: contain; }
 .screenshot-close { position: absolute; top: 10px; right: 12px; border: 0; border-radius: 4px; padding: 5px 10px; background: transparent; color: var(--ink); font: 13px 'DM Sans', sans-serif; cursor: pointer; }
 .screenshot-close:hover { background: #ffffff12; }
 html:has(.screenshot-dialog[open]) { overflow: hidden; }
