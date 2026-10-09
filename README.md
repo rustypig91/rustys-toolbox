@@ -1,6 +1,6 @@
 # Rusty's Toolbox
 
-A static landing page for [Canvaz](https://github.com/rustypig91/canvaz), a CAN analyzer, and [Pigtail](https://github.com/rustypig91/pigtail-serial-console), a serial terminal. It introduces the tools and the personal motivation behind developing them as open source.
+A static landing page for [Canvaz](https://github.com/rustypig91/canvaz), a CAN analyzer, [Pigtail](https://github.com/rustypig91/pigtail-serial-console), a serial terminal, and [Snout](https://github.com/rustypig91/snout-firmware-explorer), a firmware memory explorer. It introduces the tools and the personal motivation behind developing them as open source.
 
 ## Preview locally
 
@@ -44,6 +44,6 @@ Project descriptions are based on the projects' linked README files. Download li
 
 ## Latest release screenshots
 
-Screenshots load directly from GitHub release assets; they are not copied into this repository. Canvaz uses the permanent URL `https://github.com/rustypig91/canvaz/releases/latest/download/canvaz-screenshot.png`. Pigtail uses `https://github.com/rustypig91/pigtail-serial-console/releases/latest/download/pigtail-screenshot.png`. Both URLs point to the latest stable release without an API lookup. The hero shows overlapping previews, and the project cards show individual previews. Clicking any screenshot opens an enlarged view on the page; close it with the Close button, Escape, or by clicking outside the image. All previews update without a site deployment when a new release is published.
+Screenshots load directly from GitHub release assets; they are not copied into this repository. Canvaz uses the permanent URL `https://github.com/rustypig91/canvaz/releases/latest/download/canvaz-screenshot.png`. Pigtail uses `https://github.com/rustypig91/pigtail-serial-console/releases/latest/download/pigtail-screenshot.png`. Snout uses `https://github.com/rustypig91/snout-firmware-explorer/releases/latest/download/snout-screenshot.png`. All three URLs point to the latest stable release without an API lookup. The hero shows overlapping previews, and the project cards show individual previews. Clicking any screenshot opens an enlarged view on the page; close it with the Close button, Escape, or by clicking outside the image. All previews update without a site deployment when a new release is published.
 
-Publish the matching screenshot asset with each project's latest stable release. JavaScript hides missing or failed images and handles the enlarged view. Both previews load without JavaScript; project and download links remain available.
+Publish the matching screenshot asset with each project's latest stable release. JavaScript hides missing or failed images and handles the enlarged view. All previews load without JavaScript; project and download links remain available.
