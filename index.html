@@ -5,17 +5,17 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <meta name="google-site-verification" content="NXxUoEGgRCK5VCkxdAlZidtUtJ55pWN2Wvy0De6oDGQ" />
   <meta name="theme-color" content="#090b0e">
-  <meta name="description" content="Explore Canvaz, an open-source CAN bus analyzer with DBC decoding and J1939 support, and Pigtail, a serial terminal for Windows and Linux.">
+  <meta name="description" content="Explore Canvaz for CAN bus analysis, Pigtail for serial debugging, and Snout for firmware memory analysis. Open-source tools for Windows and Linux.">
   <link rel="canonical" href="https://rustypig91.github.io/rustys-toolbox/">
-  <meta property="og:title" content="CAN Analyzer &amp; Serial Terminal | Rusty's Toolbox">
-  <meta property="og:description" content="Explore Canvaz, an open-source CAN bus analyzer with DBC decoding and J1939 support, and Pigtail, a serial terminal for Windows and Linux.">
+  <meta property="og:title" content="Embedded Development Tools | Rusty's Toolbox">
+  <meta property="og:description" content="Explore Canvaz for CAN bus analysis, Pigtail for serial debugging, and Snout for firmware memory analysis. Open-source tools for Windows and Linux.">
   <meta property="og:type" content="website">
   <meta property="og:url" content="https://rustypig91.github.io/rustys-toolbox/">
   <meta property="og:site_name" content="Rusty's Toolbox">
   <link rel="icon" href="assets/favicon.svg" type="image/svg+xml">
   <link rel="stylesheet" href="styles.css">
   <script src="screenshots.js" defer></script>
-  <title>CAN Analyzer &amp; Serial Terminal | Rusty's Toolbox</title>
+  <title>Embedded Development Tools | Rusty's Toolbox</title>
 </head>
 <body>
   <a class="skip-link" href="#main">Skip to content</a>
@@ -28,9 +28,9 @@
       <div class="hero-copy">
         <p class="eyebrow"><span class="status-dot" aria-hidden="true"></span> From the workbench · Open source</p>
         <h1 id="hero-title">Built for my<br>workbench.<br><span>Shared for yours.</span></h1>
-        <p class="hero-description">Canvaz, a CAN bus analyzer, and Pigtail, a serial terminal. Open-source tools for embedded development on Windows and Linux, built to help with my work and personal projects, and shared in the hope they help with yours.</p>
+        <p class="hero-description">Canvaz for CAN bus analysis, Pigtail for serial debugging, and Snout for exploring firmware memory usage. Open-source tools for embedded development on Windows and Linux, built to help with my work and personal projects, and shared in the hope they help with yours.</p>
         <a class="button button-primary" href="#projects">Explore the tools <span aria-hidden="true">↓</span></a>
-        <p class="hero-note">CAN buses. Serial ports. A little less guesswork.</p>
+        <p class="hero-note">CAN buses. Serial ports. Firmware memory. A little less guesswork.</p>
       </div>
       <div class="hero-screenshots" aria-label="Latest Canvaz and Pigtail screenshots">
         <figure class="project-screenshot hero-screenshot hero-screenshot-canvaz">
@@ -49,7 +49,7 @@
     </section>
     <div class="spec-strip"><div class="wrap"><span>Made for embedded development</span><span>Windows &amp; Linux</span><span>Open source on GitHub</span></div></div>
     <section class="projects wrap" id="projects" aria-labelledby="projects-title">
-      <div class="section-heading"><div><p class="eyebrow">01 / The tools</p><h2 id="projects-title">Two tools. Less friction.</h2></div><p>From bus traffic to boot logs,<br>make sense of what your device is doing.</p></div>
+      <div class="section-heading"><div><p class="eyebrow">01 / The tools</p><h2 id="projects-title">Three tools. Less friction.</h2></div><p>From bus traffic to firmware builds,<br>make sense of what your device is doing.</p></div>
       <div class="project-grid">
         <article class="project-card canvaz">
           <div class="project-top"><img src="assets/canvaz.png" width="64" height="64" alt="" loading="lazy"><span class="project-type">CAN ANALYZER</span><span class="project-number">01</span></div>
@@ -79,11 +79,25 @@
           <div class="project-links"><a class="button button-light" href="https://github.com/rustypig91/pigtail-serial-console/releases">Get Pigtail <span aria-hidden="true">↗</span></a><a class="text-link" href="https://github.com/rustypig91/pigtail-serial-console">Source &amp; docs <span aria-hidden="true">↗</span></a></div>
           <div class="project-footer"><span>Windows / Linux</span><span>Rust + egui</span></div>
         </article>
+        <article class="project-card snout">
+          <div class="project-top"><img src="assets/snout.png" width="64" height="64" alt="" loading="lazy"><span class="project-type">FIRMWARE EXPLORER</span><span class="project-number">03</span></div>
+          <h3>Snout<span>.</span></h3><p class="project-tagline">Find where your firmware’s memory goes.</p>
+          <p class="project-description">Open a build folder or ELF file to explore Flash and static RAM usage. Find the largest contributors and compare saved builds, with analysis staying on your computer.</p>
+          <figure class="project-screenshot">
+            <button class="screenshot-trigger" type="button" aria-label="Enlarge Snout screenshot" aria-haspopup="dialog">
+              <img src="https://github.com/rustypig91/snout-firmware-explorer/releases/latest/download/snout-screenshot.png" alt="Snout application screenshot from the latest release" width="1280" height="820" loading="lazy" decoding="async">
+            </button>
+            <figcaption>Latest release · Click to enlarge</figcaption>
+          </figure>
+          <ul class="feature-list"><li>Flash and static RAM usage breakdowns</li><li>Drill into source files, symbols, and sections</li><li>Saved snapshots and build comparisons</li><li>Linker dependencies, stack reports, and hex viewer</li></ul>
+          <div class="project-links"><a class="button button-light" href="https://github.com/rustypig91/snout-firmware-explorer/releases">Get Snout <span aria-hidden="true">↗</span></a><a class="text-link" href="https://github.com/rustypig91/snout-firmware-explorer">Source &amp; docs <span aria-hidden="true">↗</span></a></div>
+          <div class="project-footer"><span>Windows / Linux</span><span>Rust + egui</span></div>
+        </article>
       </div>
       <p class="download-note">Downloads and installation instructions live in each project’s GitHub repository.</p>
     </section>
     <section class="differences wrap" id="differences" aria-labelledby="differences-title">
-      <div class="section-heading"><div><p class="eyebrow">02 / Made for the debugging session</p><h2 id="differences-title">What sets them apart.</h2></div><p>The details that help when a frame table<br>or a scrolling terminal is only the beginning.</p></div>
+      <div class="section-heading"><div><p class="eyebrow">02 / Made for the debugging session</p><h2 id="differences-title">What sets them apart.</h2></div><p>The details that help when a frame table,<br>a scrolling terminal, or a size total is only the beginning.</p></div>
       <div class="difference-grid">
         <section class="tool-difference canvaz" aria-labelledby="canvaz-difference-title">
           <p class="project-type">CAN ANALYZER</p>
@@ -113,13 +127,27 @@
           </dl>
           <a class="text-link" href="https://github.com/rustypig91/pigtail-serial-console#features">Explore Pigtail’s features <span aria-hidden="true">↗</span></a>
         </section>
+        <section class="tool-difference snout" aria-labelledby="snout-difference-title">
+          <p class="project-type">FIRMWARE EXPLORER</p>
+          <h3 id="snout-difference-title">Snout<span>.</span></h3>
+          <p class="difference-intro">A firmware size total tells you how much memory a build uses. Snout helps you find what contributes to that total and understand what changed after a rebuild.</p>
+          <dl class="difference-list">
+            <div><dt>From memory totals to individual symbols</dt><dd>Explore Flash and static RAM usage by source file, function, variable, and ELF section. Supported linker maps add memory-region capacity and remaining space.</dd></div>
+            <div><dt>Compare builds with saved baselines</dt><dd>Save a snapshot before a change, then compare builds to investigate size differences. Refresh after rebuilding to follow the effect of your changes.</dd></div>
+            <div><dt>Supporting files found automatically</dt><dd>Open a build folder or ELF file. Matching linker maps and compiler stack reports are discovered automatically where possible.</dd></div>
+            <div><dt>Look beyond memory size</dt><dd>Explore linker dependencies, compiler stack reports, and firmware bytes in the hex viewer to investigate the build in more detail.</dd></div>
+            <div><dt>Desktop exploration and command-line analysis</dt><dd>Browse builds in the desktop app or analyze and compare firmware with the CLI. Firmware analysis stays on your computer.</dd></div>
+            <div><dt>Built for embedded firmware</dt><dd>The main target is ARM Cortex-M firmware built with GCC. Other ELF files depend on available metadata; static RAM totals do not predict all runtime heap and stack requirements.</dd></div>
+          </dl>
+          <a class="text-link" href="https://github.com/rustypig91/snout-firmware-explorer#what-you-can-do">Explore Snout’s features <span aria-hidden="true">↗</span></a>
+        </section>
       </div>
     </section>
     <section class="story wrap" id="story" aria-labelledby="story-title">
       <div><p class="eyebrow">03 / Behind the tools</p><h2 id="story-title">It starts with<br>“I wish I had a tool<br>for this.”</h2><div class="story-signature"><span class="brand-mark" aria-hidden="true">r<span>.</span></span><span>Christoffer <a href="https://github.com/rustypig91">@rustypig91 ↗</a></span></div></div>
-      <div class="story-copy"><p class="story-lead">I build tools to solve the problems I run into at work and in my personal projects.</p><p>Sometimes it’s a CAN signal that’s hard to follow. Sometimes it’s a serial device that disappears halfway through a debugging session. These tools grow out of those everyday moments.</p><p>I’m developing Canvaz and Pigtail as open source because I hope they can be useful to others, too. Sharing them is also a way to learn: different hardware, different workflows, and fresh ideas can help me make them better over time.</p><p>They’re ongoing projects, shaped by real use. If one helps you, or you see a way to improve it, I’d love to hear about it.</p></div>
+      <div class="story-copy"><p class="story-lead">I build tools to solve the problems I run into at work and in my personal projects.</p><p>Sometimes it’s a CAN signal that’s hard to follow. Sometimes it’s a serial device that disappears halfway through a debugging session. Sometimes it’s a firmware build that’s running out of memory. These tools grow out of those everyday moments.</p><p>I’m developing Canvaz, Pigtail, and Snout as open source because I hope they can be useful to others, too. Sharing them is also a way to learn: different hardware, different workflows, and fresh ideas can help me make them better over time.</p><p>They’re ongoing projects, shaped by real use. If one helps you, or you see a way to improve it, I’d love to hear about it.</p></div>
     </section>
-    <section class="contribute wrap" aria-labelledby="contribute-title"><div><p class="eyebrow">04 / Build along</p><h2 id="contribute-title">Better tools start with real feedback.</h2><p>Try them on your hardware. Report a bug. Suggest a feature.<br>Or jump into the code and help make the next version better.</p></div><div class="contribution-links"><a href="https://github.com/rustypig91/canvaz/issues">Canvaz issues <span aria-hidden="true">↗</span></a><a href="https://github.com/rustypig91/pigtail-serial-console/issues">Pigtail issues <span aria-hidden="true">↗</span></a></div></section>
+    <section class="contribute wrap" aria-labelledby="contribute-title"><div><p class="eyebrow">04 / Build along</p><h2 id="contribute-title">Better tools start with real feedback.</h2><p>Try them on your hardware. Report a bug. Suggest a feature.<br>Or jump into the code and help make the next version better.</p></div><div class="contribution-links"><a href="https://github.com/rustypig91/canvaz/issues">Canvaz issues <span aria-hidden="true">↗</span></a><a href="https://github.com/rustypig91/pigtail-serial-console/issues">Pigtail issues <span aria-hidden="true">↗</span></a><a href="https://github.com/rustypig91/snout-firmware-explorer/issues">Snout issues <span aria-hidden="true">↗</span></a></div></section>
   </main>
   <footer class="site-footer wrap"><a class="footer-brand" href="#">rusty's toolbox<span>Built out of necessity. Shared with possibility.</span></a><a href="mailto:rustypig91@gmail.com">Email me <span>rustypig91@gmail.com</span></a><a href="https://github.com/rustypig91">Find me on GitHub <span aria-hidden="true">↗</span></a><a href="#main">Back to top ↑</a></footer>
   <dialog class="screenshot-dialog" aria-label="Enlarged application screenshot">
