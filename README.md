@@ -2,6 +2,10 @@
 
 A static landing page for [Canvaz](https://github.com/rustypig91/canvaz), a CAN analyzer, [Pigtail](https://github.com/rustypig91/pigtail-serial-console), a serial terminal, and [Snout](https://github.com/rustypig91/snout-firmware-explorer), a firmware memory explorer. It introduces the tools and the personal motivation behind developing them as open source.
 
+## Ubuntu installation guide
+
+The landing page’s **Install on Ubuntu** section covers Ubuntu 22.04+ on amd64: prerequisites, the signed [Rusty APT repository](https://github.com/rustypig91/rusty-apt), installation of `canvaz`, `pigtail`, and `snout`, and update/removal commands. Keep these commands aligned with the repository’s installation documentation.
+
 ## Preview locally
 
 No build step or dependency installation is required:

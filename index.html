@@ -21,7 +21,7 @@
   <a class="skip-link" href="#main">Skip to content</a>
   <header class="site-header wrap">
     <a class="brand" href="#" aria-label="Rusty's Toolbox home"><span class="brand-mark" aria-hidden="true">r<span>.</span></span><span>rusty's<span class="brand-sub">toolbox</span></span></a>
-    <nav aria-label="Main navigation"><a href="#projects">The tools</a><a href="#differences">What sets them apart</a><a href="#story">The story</a><a class="github-link" href="https://github.com/rustypig91">GitHub <span aria-hidden="true">↗</span></a></nav>
+    <nav aria-label="Main navigation"><a href="#projects">The tools</a><a href="#install">Install on Ubuntu</a><a href="#differences">What sets them apart</a><a href="#story">The story</a><a class="github-link" href="https://github.com/rustypig91">GitHub <span aria-hidden="true">↗</span></a></nav>
   </header>
   <main id="main">
     <section class="hero wrap" aria-labelledby="hero-title">
@@ -94,10 +94,37 @@
           <div class="project-footer"><span>Windows / Linux</span><span>Rust + egui</span></div>
         </article>
       </div>
-      <p class="download-note">Downloads and installation instructions live in each project’s GitHub repository.</p>
+      <p class="download-note">On Ubuntu? <a href="#install">Install with apt below ↓</a> · Other downloads are available on GitHub.</p>
+    </section>
+    <section class="installation wrap" id="install" aria-labelledby="install-title">
+      <div class="section-heading"><div><p class="eyebrow">02 / From download to workbench</p><h2 id="install-title">Install on Ubuntu</h2></div><p>Add the repository once.<br>Keep your tools up to date with Ubuntu.</p></div>
+      <div class="install-panel">
+        <div class="install-banner"><span class="install-platform">Ubuntu <strong>22.04+</strong></span><span>64-bit Intel / AMD · amd64</span></div>
+        <ol class="install-steps">
+          <li>
+            <div class="install-step-copy"><h3>Prepare your system</h3><p>Open a terminal and install the tools needed to fetch the repository’s signing key.</p></div>
+            <div class="install-terminal"><div class="terminal-label"><span aria-hidden="true">›_</span> Terminal</div><pre tabindex="0" aria-label="Install prerequisites"><code>sudo apt update
+sudo apt install ca-certificates curl</code></pre></div>
+          </li>
+          <li>
+            <div class="install-step-copy"><h3>Add Rusty’s repository</h3><p>Save the public signing key and register the package source. You only need to do this once.</p></div>
+            <div class="install-terminal"><div class="terminal-label"><span aria-hidden="true">›_</span> Repository setup</div><pre tabindex="0" aria-label="Add the signing key and APT repository"><code>sudo mkdir -p /etc/apt/keyrings
+curl -fsSL https://rustypig91.github.io/rusty-apt/rusty.asc | sudo tee /etc/apt/keyrings/rusty.asc &gt;/dev/null
+sudo chmod 644 /etc/apt/keyrings/rusty.asc
+echo 'deb [signed-by=/etc/apt/keyrings/rusty.asc] https://rustypig91.github.io/rusty-apt stable main' | sudo tee /etc/apt/sources.list.d/rusty.list</code></pre></div>
+          </li>
+          <li>
+            <div class="install-step-copy"><h3>Install your tools</h3><p>Install all three, or keep only the package names you want. Then launch them from your applications menu.</p><div class="install-packages"><span class="canvaz">canvaz</span><span class="pigtail">pigtail</span><span class="snout">snout</span></div></div>
+            <div class="install-terminal"><div class="terminal-label"><span aria-hidden="true">›_</span> Ready for the workbench</div><pre tabindex="0" aria-label="Install Canvaz, Pigtail, and Snout"><code>sudo apt update
+sudo apt install canvaz pigtail snout</code></pre></div>
+          </li>
+        </ol>
+        <div class="install-maintenance"><div><h3>Keep them current</h3><p>Update alongside your other system packages.</p><code>sudo apt update &amp;&amp; sudo apt upgrade</code></div><div><h3>Need to uninstall?</h3><p>Remove any tools you no longer need.</p><code>sudo apt remove canvaz pigtail snout</code></div></div>
+      </div>
+      <p class="install-note">Packages and repository setup: <a class="text-link" href="https://github.com/rustypig91/rusty-apt#install-on-ubuntu-2204-or-newer-amd64">Rusty APT documentation <span aria-hidden="true">↗</span></a></p>
     </section>
     <section class="differences wrap" id="differences" aria-labelledby="differences-title">
-      <div class="section-heading"><div><p class="eyebrow">02 / Made for the debugging session</p><h2 id="differences-title">What sets them apart.</h2></div><p>The details that help when a frame table,<br>a scrolling terminal, or a size total is only the beginning.</p></div>
+      <div class="section-heading"><div><p class="eyebrow">03 / Made for the debugging session</p><h2 id="differences-title">What sets them apart.</h2></div><p>The details that help when a frame table,<br>a scrolling terminal, or a size total is only the beginning.</p></div>
       <div class="difference-grid">
         <section class="tool-difference canvaz" aria-labelledby="canvaz-difference-title">
           <p class="project-type">CAN ANALYZER</p>
@@ -144,10 +171,10 @@
       </div>
     </section>
     <section class="story wrap" id="story" aria-labelledby="story-title">
-      <div><p class="eyebrow">03 / Behind the tools</p><h2 id="story-title">It starts with<br>“I wish I had a tool<br>for this.”</h2><div class="story-signature"><span class="brand-mark" aria-hidden="true">r<span>.</span></span><span>Christoffer <a href="https://github.com/rustypig91">@rustypig91 ↗</a></span></div></div>
+      <div><p class="eyebrow">04 / Behind the tools</p><h2 id="story-title">It starts with<br>“I wish I had a tool<br>for this.”</h2><div class="story-signature"><span class="brand-mark" aria-hidden="true">r<span>.</span></span><span>Christoffer <a href="https://github.com/rustypig91">@rustypig91 ↗</a></span></div></div>
       <div class="story-copy"><p class="story-lead">I build tools to solve the problems I run into at work and in my personal projects.</p><p>Sometimes it’s a CAN signal that’s hard to follow. Sometimes it’s a serial device that disappears halfway through a debugging session. Sometimes it’s a firmware build that’s running out of memory. These tools grow out of those everyday moments.</p><p>I’m developing Canvaz, Pigtail, and Snout as open source because I hope they can be useful to others, too. Sharing them is also a way to learn: different hardware, different workflows, and fresh ideas can help me make them better over time.</p><p>They’re ongoing projects, shaped by real use. If one helps you, or you see a way to improve it, I’d love to hear about it.</p></div>
     </section>
-    <section class="contribute wrap" aria-labelledby="contribute-title"><div><p class="eyebrow">04 / Build along</p><h2 id="contribute-title">Better tools start with real feedback.</h2><p>Try them on your hardware. Report a bug. Suggest a feature.<br>Or jump into the code and help make the next version better.</p></div><div class="contribution-links"><a href="https://github.com/rustypig91/canvaz/issues">Canvaz issues <span aria-hidden="true">↗</span></a><a href="https://github.com/rustypig91/pigtail-serial-console/issues">Pigtail issues <span aria-hidden="true">↗</span></a><a href="https://github.com/rustypig91/snout-firmware-explorer/issues">Snout issues <span aria-hidden="true">↗</span></a></div></section>
+    <section class="contribute wrap" aria-labelledby="contribute-title"><div><p class="eyebrow">05 / Build along</p><h2 id="contribute-title">Better tools start with real feedback.</h2><p>Try them on your hardware. Report a bug. Suggest a feature.<br>Or jump into the code and help make the next version better.</p></div><div class="contribution-links"><a href="https://github.com/rustypig91/canvaz/issues">Canvaz issues <span aria-hidden="true">↗</span></a><a href="https://github.com/rustypig91/pigtail-serial-console/issues">Pigtail issues <span aria-hidden="true">↗</span></a><a href="https://github.com/rustypig91/snout-firmware-explorer/issues">Snout issues <span aria-hidden="true">↗</span></a></div></section>
   </main>
   <footer class="site-footer wrap"><a class="footer-brand" href="#">rusty's toolbox<span>Built out of necessity. Shared with possibility.</span></a><a href="mailto:rustypig91@gmail.com">Email me <span>rustypig91@gmail.com</span></a><a href="https://github.com/rustypig91">Find me on GitHub <span aria-hidden="true">↗</span></a><a href="#main">Back to top ↑</a></footer>
   <dialog class="screenshot-dialog" aria-label="Enlarged application screenshot">

@@ -114,6 +114,36 @@ html:has(.screenshot-dialog[open]) { overflow: hidden; }
 .project-footer { display: flex; justify-content: space-between; border-top: 1px solid var(--line); padding-top: 19px; margin-top: 27px; font: 9px/1.5 var(--mono); color: var(--muted); }
 .download-note { font: 10px/1.7 var(--mono); text-align: center; color: var(--muted); margin: 23px 0 0; }
 
+
+.installation { border-top: 1px solid var(--line); padding-block: 80px; }
+.download-note a { color: var(--green); text-decoration: underline; text-underline-offset: 4px; }
+.install-panel { border: 1px solid var(--line); border-radius: 14px; overflow: hidden; background: linear-gradient(130deg, #151d1b, var(--surface) 55%); }
+.install-banner { display: flex; align-items: center; justify-content: space-between; flex-wrap: wrap; gap: 12px; padding: 20px 30px; border-bottom: 1px solid var(--line); color: var(--muted); font: 11px/1.6 var(--mono); }
+.install-platform { color: var(--ink); font: 500 17px var(--heading); }
+.install-platform strong { margin-left: 8px; color: var(--green); font-weight: 500; }
+.install-steps { list-style: none; counter-reset: install-step; margin: 0; padding: 0 30px; }
+.install-steps > li { counter-increment: install-step; display: grid; grid-template-columns: minmax(0, .8fr) minmax(0, 1.4fr); gap: 32px; padding-block: 30px; }
+.install-steps > li + li { border-top: 1px solid var(--line); }
+.install-step-copy { position: relative; padding-left: 44px; }
+.install-step-copy::before { content: counter(install-step, decimal-leading-zero); position: absolute; left: 0; top: 1px; color: var(--green); font: 12px/1.8 var(--mono); }
+.install-step-copy h3, .install-maintenance h3 { font: 500 19px/1.4 var(--heading); letter-spacing: -.4px; margin-bottom: 10px; }
+.install-step-copy p, .install-maintenance p { font-size: 13px; line-height: 1.8; color: var(--muted); margin-bottom: 0; }
+.install-terminal { min-width: 0; align-self: start; background: #090d12; border: 1px solid var(--line); border-radius: 9px; overflow: hidden; }
+.terminal-label { display: flex; gap: 10px; padding: 10px 16px; border-bottom: 1px solid #1e2630; font: 10px/1.6 var(--mono); color: var(--muted); }
+.terminal-label span { color: var(--green); }
+.install-terminal pre { margin: 0; padding: 18px; overflow-x: auto; color: #dce8d4; scrollbar-color: #44523d #090d12; }
+.install-terminal code { font: 12px/1.9 var(--mono); }
+.install-terminal pre:focus-visible { outline: 2px solid var(--green); outline-offset: -3px; }
+.install-packages { display: flex; flex-wrap: wrap; gap: 8px; margin-top: 16px; }
+.install-packages span { padding: 5px 9px; border: 1px solid var(--line); border-radius: 5px; font: 10px/1.5 var(--mono); }
+.install-packages .canvaz { color: var(--green); }
+.install-packages .pigtail { color: var(--orange); }
+.install-packages .snout { color: var(--blue); }
+.install-maintenance { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 30px; padding: 26px 30px; border-top: 1px solid var(--line); background: #ffffff02; }
+.install-maintenance h3 { font-size: 16px; margin-bottom: 6px; }
+.install-maintenance code { display: block; overflow-wrap: anywhere; margin-top: 12px; color: #c3ccd7; font: 11px/1.8 var(--mono); }
+.install-note { margin: 18px 0 0; font-size: 12px; line-height: 1.8; color: var(--muted); }
+
 .differences { border-top: 1px solid var(--line); padding-block: 80px; }
 .difference-grid { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 32px; }
 .tool-difference { --tool-accent: var(--green); }
@@ -184,7 +214,11 @@ html:has(.screenshot-dialog[open]) { overflow: hidden; }
   h1 { font-size: clamp(36px, 8vw, 60px); letter-spacing: -1.8px; }
   .hero-description { font-size: 15px; }
   .spec-strip > .wrap { flex-wrap: wrap; justify-content: center; font-size: 9px; gap: 12px 25px; }
-  .projects { padding-block: 54px; }
+  .projects, .installation { padding-block: 54px; }
+  .install-steps { padding-inline: 22px; }
+  .install-steps > li { grid-template-columns: 1fr; gap: 20px; padding-block: 24px; }
+  .install-banner, .install-maintenance { padding: 22px; }
+  .install-maintenance { grid-template-columns: 1fr; gap: 24px; }
   .section-heading { display: block; }
   .section-heading > p { margin-top: 15px; }
   .section-heading > p br { display: none; }
@@ -205,7 +239,7 @@ html:has(.screenshot-dialog[open]) { overflow: hidden; }
 }
 @media (max-width: 480px) {
   .site-header nav { gap: 14px; }
-  .site-header nav a:not(.github-link) { display: none; }
+  .site-header nav a:not(.github-link):not([href="#install"]) { display: none; }
   .eyebrow { font-size: 9px; letter-spacing: 1px; }
   .project-card { padding: 24px; }
   .project-links { gap: 16px; }
