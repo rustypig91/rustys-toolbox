@@ -97,7 +97,7 @@
       <p class="download-note">On Ubuntu? <a href="#install">Install with apt below ↓</a> · Other downloads are available on GitHub.</p>
     </section>
     <section class="installation wrap" id="install" aria-labelledby="install-title">
-      <div class="section-heading"><div><p class="eyebrow">02 / From download to workbench</p><h2 id="install-title">Install on Ubuntu</h2></div><p>Add the repository once.<br>Keep your tools up to date with Ubuntu.</p></div>
+      <div class="section-heading"><div><p class="eyebrow">02 / From download to workbench</p><h2 id="install-title">Install on Ubuntu</h2></div><p>Add the repository once.<br> Keep your tools up to date with Ubuntu.</p></div>
       <div class="install-panel">
         <div class="install-banner"><span class="install-platform">Ubuntu <strong>22.04+</strong></span><span>64-bit Intel / AMD · amd64</span></div>
         <ol class="install-steps">
@@ -108,10 +108,14 @@ sudo apt install ca-certificates curl</code></pre></div>
           </li>
           <li>
             <div class="install-step-copy"><h3>Add Rusty’s repository</h3><p>Save the public signing key and register the package source. You only need to do this once.</p></div>
-            <div class="install-terminal"><div class="terminal-label"><span aria-hidden="true">›_</span> Repository setup</div><pre tabindex="0" aria-label="Add the signing key and APT repository"><code>sudo mkdir -p /etc/apt/keyrings
-curl -fsSL https://rustypig91.github.io/rusty-apt/rusty.asc | sudo tee /etc/apt/keyrings/rusty.asc &gt;/dev/null
-sudo chmod 644 /etc/apt/keyrings/rusty.asc
-echo 'deb [signed-by=/etc/apt/keyrings/rusty.asc] https://rustypig91.github.io/rusty-apt stable main' | sudo tee /etc/apt/sources.list.d/rusty.list</code></pre></div>
+            <div class="install-terminal"><div class="terminal-label"><span aria-hidden="true">›_</span> Repository setup</div><pre tabindex="0" aria-label="Add the signing key and APT repository"><code>(
+  set -e
+  key_file=$(mktemp)
+  trap 'rm -f "$key_file"' EXIT
+  curl -fsSL https://rustypig91.github.io/rusty-apt/rusty.asc -o "$key_file"
+  sudo install -D -m 644 "$key_file" /etc/apt/keyrings/rusty.asc
+  echo 'deb [signed-by=/etc/apt/keyrings/rusty.asc] https://rustypig91.github.io/rusty-apt stable main' | sudo tee /etc/apt/sources.list.d/rusty.list
+)</code></pre></div>
           </li>
           <li>
             <div class="install-step-copy"><h3>Install your tools</h3><p>Install all three, or keep only the package names you want. Then launch them from your applications menu.</p><div class="install-packages"><span class="canvaz">canvaz</span><span class="pigtail">pigtail</span><span class="snout">snout</span></div></div>
