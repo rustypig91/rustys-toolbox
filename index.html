@@ -100,7 +100,7 @@
       <div class="section-heading"><div><p class="eyebrow">02 / From download to workbench</p><h2 id="install-title">Install on Ubuntu</h2></div><p>Add the repository once.<br> Keep your tools up to date with Ubuntu.</p></div>
       <div class="install-panel">
         <div class="install-banner"><span class="install-platform">Ubuntu <strong>22.04+</strong></span><span>64-bit Intel / AMD · amd64</span></div>
-        <ol class="install-steps">
+        <ol class="install-steps" role="list">
           <li>
             <div class="install-step-copy"><h3>Prepare your system</h3><p>Open a terminal and install the tools needed to fetch the repository’s signing key.</p></div>
             <div class="install-terminal"><div class="terminal-label"><span aria-hidden="true">›_</span> Terminal</div><pre tabindex="0" aria-label="Install prerequisites"><code>sudo apt update
@@ -114,7 +114,8 @@ sudo apt install ca-certificates curl</code></pre></div>
   trap 'rm -f "$key_file"' EXIT
   curl -fsSL https://rustypig91.github.io/rusty-apt/rusty.asc -o "$key_file"
   sudo install -D -m 644 "$key_file" /etc/apt/keyrings/rusty.asc
-  echo 'deb [signed-by=/etc/apt/keyrings/rusty.asc] https://rustypig91.github.io/rusty-apt stable main' | sudo tee /etc/apt/sources.list.d/rusty.list
+  echo 'deb [arch=amd64 signed-by=/etc/apt/keyrings/rusty.asc] https://rustypig91.github.io/rusty-apt stable main' | sudo tee /etc/apt/sources.list.d/rusty.list
+  sudo chmod 644 /etc/apt/sources.list.d/rusty.list
 )</code></pre></div>
           </li>
           <li>
