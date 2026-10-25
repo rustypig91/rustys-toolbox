@@ -33,12 +33,14 @@ h1, h2, h3, p { margin-top: 0; }
 .skip-link { position: absolute; left: 20px; top: -80px; z-index: 10; padding: 12px; background: var(--green); color: var(--bg); }
 .skip-link:focus { top: 12px; }
 
-.site-header { display: flex; align-items: center; justify-content: space-between; padding-block: 26px; border-bottom: 1px solid var(--line); }
+.site-header { display: flex; flex-wrap: wrap; gap: 24px; align-items: center; justify-content: space-between; padding-block: 26px; border-bottom: 1px solid var(--line); }
 .brand { display: flex; gap: 12px; align-items: center; font: 600 22px/1.1 var(--heading); }
 .brand-mark { width: 44px; height: 44px; display: flex; align-items: center; justify-content: center; background: var(--green); border-radius: 12px; font: 700 34px/1 var(--heading); color: var(--bg); letter-spacing: -3px; }
 .brand-mark span { color: #46612e; }
 .brand-sub { display: block; font: 400 10px var(--mono); letter-spacing: 1px; color: var(--muted); margin-top: 6px; }
-.site-header nav { display: flex; align-items: center; gap: 30px; font-size: 13px; color: #bac2cc; }
+.site-header nav { display: flex; flex-wrap: wrap; align-items: center; gap: 30px; font-size: 13px; color: #bac2cc; }
+.support-link { display: flex; flex-direction: column; gap: 4px; white-space: nowrap; }
+.support-prompt { font-size: 10px; color: var(--muted); }
 .site-header nav a:hover, .text-link:hover, .site-footer a:hover { color: var(--green); }
 .github-link { border: 1px solid var(--line); background: #ffffff04; border-radius: 8px; padding: 11px 17px; }
 .github-link span { margin-left: 14px; }
@@ -238,8 +240,10 @@ html:has(.screenshot-dialog[open]) { overflow: hidden; }
   .site-footer > a:last-child { margin-left: auto; }
 }
 @media (max-width: 480px) {
+  .site-header { flex-wrap: wrap; gap: 18px; }
+  .site-header nav { width: 100%; justify-content: space-between; }
   .site-header nav { gap: 14px; }
-  .site-header nav a:not(.github-link):not([href="#install"]) { display: none; }
+  .site-header nav a:not(.github-link):not(.support-link):not([href="#install"]) { display: none; }
   .eyebrow { font-size: 9px; letter-spacing: 1px; }
   .project-card { padding: 24px; }
   .project-links { gap: 16px; }
