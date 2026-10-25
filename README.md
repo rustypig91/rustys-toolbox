@@ -20,7 +20,7 @@ Open http://localhost:8000. You can also open `index.html` directly.
 
 1. In the repository's **Settings → Pages**, select **GitHub Actions** as the source.
 2. Push the site to `main`, or manually run **Deploy GitHub Pages** in the Actions tab.
-3. The expected URL is https://rustypig91.github.io/rustys-toolbox/.
+3. The public URL is https://rustystoolbox.com/.
 
 The workflow publishes only `index.html`, `styles.css`, `screenshots.js`, `sitemap.xml`, and `assets/`. Setup follows the [GitHub Pages workflow documentation](https://docs.github.com/en/pages/getting-started-with-github-pages/using-custom-workflows-with-github-pages).
 
@@ -30,11 +30,11 @@ The page serves its full content as static HTML, with a descriptive title, meta 
 
 After deployment:
 
-1. Add `https://rustypig91.github.io/rustys-toolbox/` as a URL-prefix property in [Google Search Console](https://search.google.com/search-console). Verify ownership using Google's provided HTML file or meta tag. If using a verification file, include it in the workflow's published files and path triggers.
-2. Submit `https://rustypig91.github.io/rustys-toolbox/sitemap.xml` in Search Console's **Sitemaps** report.
+1. Domain ownership verification for `rustystoolbox.com` is managed through DNS at Spaceship. Keep the verification DNS record in place; no HTML verification file or meta tag is needed in this repository.
+2. Submit `https://rustystoolbox.com/sitemap.xml` in [Google Search Console](https://search.google.com/search-console)'s **Sitemaps** report.
 3. Inspect the canonical page URL with **URL Inspection**, check that indexing is allowed, and request indexing. Monitor the **Page indexing** and **Performance** reports afterward.
 
-A sitemap helps discovery but does not guarantee indexing or ranking. This project site does not include `robots.txt`: crawlers look for that file at the host root (`https://rustypig91.github.io/robots.txt`), not under `/rustys-toolbox/`. Any host-wide robots rules must be managed in the root GitHub Pages site.
+A sitemap helps discovery but does not guarantee indexing or ranking. This site does not currently include `robots.txt`. If added, it should be published at `https://rustystoolbox.com/robots.txt`.
 
 ## Editing
 
