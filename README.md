@@ -38,13 +38,19 @@ A sitemap helps discovery but does not guarantee indexing or ranking. This site 
 
 ## Editing
 
-- `index.html`: site copy, project features, and GitHub links.
+- `index.html`: site copy, project features, GitHub links, and Microsoft Store availability.
 - `styles.css`: layout, colors, typography, responsive rules, and reduced-motion support.
 - `screenshots.js`: enlarged image dialog and failed-image handling.
 - `sitemap.xml`: canonical URL for search-engine discovery.
 - `assets/`: project icons copied from their respective repositories, plus the site favicon.
 
 Project descriptions are based on the projects' linked README files. Download links lead to release listings, avoiding hard-coded version numbers. Google Fonts supplies the typography; local fallback fonts keep the page usable offline. The site has no tracking or backend.
+
+## Microsoft Store links
+
+Each project card has a `.project-store` block above its GitHub links. Pigtail links to `https://apps.microsoft.com/detail/9P5WS4PFD96H` (product ID `9P5WS4PFD96H`). Canvaz and Snout show “Not yet available in the Store” without a clickable placeholder.
+
+When another app is published, replace its `.store-unavailable` span with the same `.button.button-light.store-link` anchor used by Pigtail. Set its URL to `https://apps.microsoft.com/detail/PRODUCT_ID`, update the accessible label to name the app, and change the `.store-note` text to “Install on Windows”. The shared styles already support all three cards, and Store links work without JavaScript.
 
 ## Latest release screenshots
 
