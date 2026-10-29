@@ -107,6 +107,10 @@ html:has(.screenshot-dialog[open]) { overflow: hidden; }
 .feature-list li::before { content: '↳'; position: absolute; left: 0; color: var(--green); }
 .pigtail .feature-list li::before { color: var(--orange); }
 .project-links { display: flex; align-items: center; flex-wrap: wrap; gap: 16px 24px; margin-top: auto; }
+.project-store { flex: 0 0 100%; display: flex; flex-direction: column; gap: 8px; }
+.store-link { width: 100%; }
+.store-unavailable { display: flex; align-items: center; min-height: 46px; border: 1px dashed var(--line); border-radius: 8px; padding: 12px 16px; color: var(--muted); font-size: 12px; font-weight: 700; }
+.store-note { color: var(--muted); font-size: 11px; line-height: 1.6; }
 .button-light { background: #b7ed8310; border-color: #b7ed8338; color: var(--green); font-size: 12px; padding: 12px 16px; }
 .button-light:hover { background: #b7ed8322; border-color: var(--green); }
 .pigtail .button-light { background: #f5af8710; border-color: #f5af8738; color: var(--orange); }
