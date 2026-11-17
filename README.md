@@ -48,9 +48,9 @@ Project descriptions are based on the projects' linked README files. GitHub down
 
 ## Microsoft Store links
 
-Each project card has a `.project-store` block above its GitHub links. Canvaz links to `https://apps.microsoft.com/detail/9p3pgb2zz67l` (product ID `9p3pgb2zz67l`), and Pigtail links to `https://apps.microsoft.com/detail/9P5WS4PFD96H` (product ID `9P5WS4PFD96H`). Snout shows “Not yet available in the Store” without a clickable placeholder. The separate “GitHub releases” buttons keep release downloads available for all three tools, and the note below the cards explains the Store, GitHub, and Ubuntu installation options.
+Each project card has a `.project-store` block above its GitHub links. Canvaz links to `https://apps.microsoft.com/detail/9p3pgb2zz67l` (product ID `9p3pgb2zz67l`), Pigtail links to `https://apps.microsoft.com/detail/9P5WS4PFD96H` (product ID `9P5WS4PFD96H`), and Snout links to `https://apps.microsoft.com/detail/9NWM3QW158VZ` (product ID `9NWM3QW158VZ`). The separate “GitHub releases” buttons keep release downloads available for all three tools, and the note below the cards explains the Store, GitHub, and Ubuntu installation options.
 
-When another app is published, replace its `.store-unavailable` span with the same `.button.button-light.store-link` anchor used by Canvaz and Pigtail. Set its URL to `https://apps.microsoft.com/detail/PRODUCT_ID`, update the accessible label to name the app, and change the `.store-note` text to “Install on Windows”. Give that note a unique ID (for example, `snout-store-note`) and reference it in the anchor’s `aria-describedby` so the Windows requirement is also announced when focusing the link. Update the download note below the cards to match the available listings. The shared styles already support all three cards, and Store links work without JavaScript.
+Store buttons use `.button.button-light.store-link` anchors with an accessible label naming the app. Each “Install on Windows” note has a unique ID referenced by the anchor’s `aria-describedby` so the Windows requirement is also announced when focusing the link. The shared styles support all three cards, and Store links work without JavaScript.
 
 ## Latest release screenshots
 
